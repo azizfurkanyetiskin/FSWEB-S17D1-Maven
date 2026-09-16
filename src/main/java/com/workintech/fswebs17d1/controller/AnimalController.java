@@ -1,6 +1,6 @@
-package com.workintech.fsswebs17d1.controller;
+package com.workintech.fswebs17d1.controller;
 
-import com.workintech.fsswebs17d1.entity.Animal;
+import com.workintech.fswebs17d1.entity.Animal;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -11,15 +11,15 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/animal")
+@RequestMapping("/workintech/animal")
 public class AnimalController {
 
     private Map<Integer, Animal> animals;
 
-    @Value("")
+    @Value("${course.name}")
     private String courseName;
 
-    @Value("")
+    @Value("${project.developer.fullname}")
     private String developerFullname;
 
     @PostConstruct
